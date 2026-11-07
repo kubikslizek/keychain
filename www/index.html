@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#171B1B">
+<title>Tamagotchi ovladač</title>
+<style>
+:root{--bg:#171B1B;--card:#222828;--text:#F0F3EF;--dim:#AEBAB2;--alt:#303838;--lime:#B5F36A;--on:#172016;--err:#FF8A80}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font:16px system-ui,sans-serif;
+  padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}
+main{max-width:480px;margin:0 auto}
+.card{background:var(--card);border-radius:20px;padding:20px}
+.status{display:flex;align-items:center;gap:12px;font-weight:600}
+.status::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--dim)}
+.status.on::before{background:var(--lime)}
+.msg{color:var(--dim);font-size:13px;line-height:16px;margin:8px 0 16px;min-height:16px}
+.msg.error{color:var(--err)}
+button{font:inherit;border:0;cursor:pointer}
+button:disabled{opacity:.4;cursor:default}
+.primary{width:100%;min-height:48px;border-radius:12px;background:var(--lime);color:var(--on);font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.mood{height:184px;padding:16px;border-radius:20px;background:var(--card);color:var(--text);
+  display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;font-weight:600}
+.mood b{color:var(--lime);font-size:40px;line-height:48px;font-weight:700}
+.mood:active:not(:disabled){background:var(--alt)}
+</style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div id="status" class="status off">Odpojeno</div>
+    <p id="msg" class="msg"></p>
+    <button id="connect" class="primary">Připojit mazlíčka</button>
+  </section>
+  <section class="grid">
+    <button class="mood" data-value="1" data-name="Šťastný"><b>01</b>Šťastný</button>
+    <button class="mood" data-value="2" data-name="Ospalý"><b>02</b>Ospalý</button>
+    <button class="mood" data-value="3" data-name="Naštvaný"><b>03</b>Naštvaný</button>
+    <button class="mood" data-value="4" data-name="Překvapený"><b>04</b>Překvapený</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

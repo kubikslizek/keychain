@@ -1,0 +1,17 @@
+{
+  "name": "tamagotchi-ovladac",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --outfile=www/app.js"
+  },
+  "dependencies": {
+    "@capacitor-community/bluetooth-le": "^7.0.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0",
+    "esbuild": "^0.25.0"
+  }
+}
