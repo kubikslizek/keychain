@@ -1,9 +1,0 @@
-{
-  "appId": "com.example.tamagotchiovladac",
-  "appName": "Tamagotchi",
-  "webDir": "www",
-  "backgroundColor": "#171B1B",
-  "plugins": {
-    "StatusBar": { "style": "DARK", "backgroundColor": "#171B1B" }
-  }
-}
